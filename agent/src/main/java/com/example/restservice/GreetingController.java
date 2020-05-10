@@ -34,7 +34,8 @@ public class GreetingController {
 					 while ((dfOut = br.readLine()) != null) {
 						 System.out.println("---------------");
 							 System.out.println("line: " + dfOut);
-							 String[] split = dfOut.split(" ");
+String after = dfOut.trim().replaceAll(" +", " ");
+							 String[] split = after.split(" ");
 
 							 System.out.println(split);
 							 System.out.println(split[3]);
@@ -47,6 +48,7 @@ public class GreetingController {
 					 System.out.println ("exit: " + p.exitValue());
 					 p.destroy();
 
+        partitions.remove(0);
 					 return partitions;
 
 			 } catch (Exception e) {
