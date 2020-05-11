@@ -1,6 +1,3 @@
+const mongoose = require('mongoose');
 
-module.exports = class DiskSpaceMdl {
-  constructor(data) {
-    this.hostname = data.hostname;
-    this.descr = data.descr;
-  }
+const Hosts = mongoose.model('Host', { hostname: String,description: String });
