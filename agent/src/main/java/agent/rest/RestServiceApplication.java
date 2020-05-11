@@ -1,9 +1,9 @@
-package com.example.restservice;
+package agent.rest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"agent"})
 public class RestServiceApplication {
 
     public static void main(String[] args) {

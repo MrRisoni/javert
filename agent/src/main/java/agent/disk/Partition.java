@@ -1,4 +1,4 @@
-package com.example.restservice.disk;
+package agent.disk;
 
 public class Partition {
 
