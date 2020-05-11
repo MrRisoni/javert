@@ -12,6 +12,7 @@ import { ProcInfoComponent } from './proc-info/proc-info.component';
 import { SummaryComponent } from './summary/summary.component';
 import { DisksComponent } from './disks/disks.component';
 import { MemoryComponent } from './memory/memory.component';
+import {ChartsModule} from "ng2-charts";
 
 @NgModule({
   declarations: [
@@ -27,10 +28,11 @@ import { MemoryComponent } from './memory/memory.component';
     DisksComponent,
     MemoryComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ChartsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
