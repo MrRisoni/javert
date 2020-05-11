@@ -13,6 +13,7 @@ import { SummaryComponent } from './summary/summary.component';
 import { DisksComponent } from './disks/disks.component';
 import { MemoryComponent } from './memory/memory.component';
 import {ChartsModule} from "ng2-charts";
+import { SummaryElemComponent } from './summary-elem/summary-elem.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {ChartsModule} from "ng2-charts";
     ProcInfoComponent,
     SummaryComponent,
     DisksComponent,
-    MemoryComponent
+    MemoryComponent,
+    SummaryElemComponent
   ],
     imports: [
         BrowserModule,

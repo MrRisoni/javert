@@ -1,0 +1,12 @@
+#summaryElems {
+  margin-bottom: 15px;
+}
+
+
+.centerLogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 45px;
+}
