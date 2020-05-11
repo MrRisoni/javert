@@ -1,48 +1,80 @@
 <p>host works!</p>
 
 <section>
- <h2>Hostname</h2>
- <div class="row">
-   <div class="col-10">
-     <nav>
-  <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    <a class="nav-item nav-link active" id="nav-summary-tab" data-toggle="tab" href="#nav-summary" role="tab" aria-controls="nav-summary" aria-selected="true">Summary</a>
-    <a class="nav-item nav-link" id="nav-processes-tab" data-toggle="tab" href="#nav-processes" role="tab" aria-controls="nav-processes" aria-selected="false">Processes</a>
-    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-cpu" role="tab" aria-controls="nav-cpu" aria-selected="false">CPU</a>
-    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-memory" role="tab" aria-controls="nav-memory" aria-selected="false">Memory</a>
-    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-disks" role="tab" aria-controls="nav-disks" aria-selected="false">Disks</a>
-    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-zfs" role="tab" aria-controls="nav-zfs" aria-selected="false">ZFS</a>
-    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-btrfs" role="tab" aria-controls="nav-btrfs" aria-selected="false">BTRFS</a>
+  <h2>Hostname</h2>
+  <div class="row">
+    <div class="col-10">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-summary-tab" data-toggle="tab" href="#nav-summary" role="tab"
+             aria-controls="nav-summary" aria-selected="true">Summary</a>
+          <a class="nav-item nav-link" id="nav-processes-tab" data-toggle="tab" href="#nav-processes" role="tab"
+             aria-controls="nav-processes" aria-selected="false">Processes</a>
+          <a class="nav-item nav-link" id="nav-cpu-tab" data-toggle="tab" href="#nav-cpu" role="tab"
+             aria-controls="nav-cpu" aria-selected="false">CPU</a>
+          <a class="nav-item nav-link" id="nav-memory-tab" data-toggle="tab" href="#nav-memory" role="tab"
+             aria-controls="nav-memory" aria-selected="false">Memory</a>
+          <a class="nav-item nav-link" id="nav-disks-tab" data-toggle="tab" href="#nav-disks" role="tab"
+             aria-controls="nav-disks" aria-selected="false">Disks</a>
+          <a class="nav-item nav-link" id="nav-zfs-tab" data-toggle="tab" href="#nav-zfs" role="tab"
+             aria-controls="nav-zfs" aria-selected="false">ZFS</a>
+          <a class="nav-item nav-link" id="nav-btrfs-tab" data-toggle="tab" href="#nav-btrfs" role="tab"
+             aria-controls="nav-btrfs" aria-selected="false">BTRFS</a>
 
-    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-llvm" role="tab" aria-controls="nav-llvm" aria-selected="false">LVM</a>
+          <a class="nav-item nav-link" id="nav-llvm-tab" data-toggle="tab" href="#nav-llvm" role="tab"
+             aria-controls="nav-llvm" aria-selected="false">LVM</a>
 
-    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-network" role="tab" aria-controls="nav-network" aria-selected="false">Network</a>
-
-
-
-  </div>
-</nav>
-<div class="tab-content" id="nav-tabContent">
-  <div class="tab-pane fade show active" id="nav-summary" role="tabpanel" aria-labelledby="nav-summary-tab">summ</div>
-  <div class="tab-pane fade" id="nav-processes" role="tabpanel" aria-labelledby="nav-processes-tab">proc</div>
-  <div class="tab-pane fade" id="nav-cpu" role="tabpanel" aria-labelledby="nav-cpu-tab">cpu.</div>
-
-  <div class="tab-pane fade" id="nav-memory" role="tabpanel" aria-labelledby="nav-memory-tab">mem</div>
-  <div class="tab-pane fade" id="nav-disks" role="tabpanel" aria-labelledby="nav-disks-tab">disk</div>
-  <div class="tab-pane fade" id="nav-zfs" role="tabpanel" aria-labelledby="nav-zfs-tab">zfs.</div>
-
-  <div class="tab-pane fade" id="nav-btrfs" role="tabpanel" aria-labelledby="nav-btrfs-tab">btrfs.</div>
-
-  <div class="tab-pane fade" id="nav-llvm" role="tabpanel" aria-labelledby="nav-llvm-tab">lvm.</div>
-
-  <div class="tab-pane fade" id="nav-network" role="tabpanel" aria-labelledby="nav-network-tab">netowork</div>
+          <a class="nav-item nav-link" id="nav-network-tab" data-toggle="tab" href="#nav-network" role="tab"
+             aria-controls="nav-network" aria-selected="false">Network</a>
 
 
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-summary" role="tabpanel" aria-labelledby="nav-summary-tab">
+          <app-summary></app-summary>
 
-</div>
+        </div>
+        <div class="tab-pane fade" id="nav-processes" role="tabpanel" aria-labelledby="nav-processes-tab">
+          <app-proc-info></app-proc-info>
+        </div>
+        <div class="tab-pane fade" id="nav-cpu" role="tabpanel" aria-labelledby="nav-cpu-tab">
+          <app-cpu></app-cpu>
+
+        </div>
+
+        <div class="tab-pane fade" id="nav-memory" role="tabpanel" aria-labelledby="nav-memory-tab">
+          <app-memory></app-memory>
+        </div>
+        <div class="tab-pane fade" id="nav-disks" role="tabpanel" aria-labelledby="nav-disks-tab">
+          <app-disks></app-disks>
+
+        </div>
+        <div class="tab-pane fade" id="nav-zfs" role="tabpanel" aria-labelledby="nav-zfs-tab">
+          <app-zfs></app-zfs>
+
+        </div>
+
+        <div class="tab-pane fade" id="nav-btrfs" role="tabpanel" aria-labelledby="nav-btrfs-tab">
+          <app-btrfs></app-btrfs>
+
+        </div>
+
+        <div class="tab-pane fade" id="nav-llvm" role="tabpanel" aria-labelledby="nav-llvm-tab">
+          <app-lvm></app-lvm>
+
+        </div>
+
+        <div class="tab-pane fade" id="nav-network" role="tabpanel" aria-labelledby="nav-network-tab">
+
+          <app-network></app-network>
+        </div>
+
+
+      </div>
 
 
     </div>
-   </div>
+  </div>
 
 </section>

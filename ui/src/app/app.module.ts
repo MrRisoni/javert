@@ -11,6 +11,7 @@ import { CPUComponent } from './cpu/cpu.component';
 import { ProcInfoComponent } from './proc-info/proc-info.component';
 import { SummaryComponent } from './summary/summary.component';
 import { DisksComponent } from './disks/disks.component';
+import { MemoryComponent } from './memory/memory.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DisksComponent } from './disks/disks.component';
     CPUComponent,
     ProcInfoComponent,
     SummaryComponent,
-    DisksComponent
+    DisksComponent,
+    MemoryComponent
   ],
   imports: [
     BrowserModule,
