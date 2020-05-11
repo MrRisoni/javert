@@ -13,7 +13,7 @@ public class DiskController {
 
 
     @GetMapping("/partitions")
-    public ArrayList<Partition> partitions(@RequestParam(value = "name", defaultValue = "World") String name) {
+    public ArrayList<Partition> partitions() {
 
         ArrayList<Partition> partitions = new ArrayList<>();
 
