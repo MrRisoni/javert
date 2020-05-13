@@ -1,4 +1,7 @@
 
 export class HostMdl {
-    name: string;
+    hostname: string;
+    fileSys : string;
 }
+
+

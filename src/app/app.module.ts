@@ -17,6 +17,7 @@ import { SummaryElemComponent } from './summary-elem/summary-elem.component';
 import { HostsListComponent } from './hosts-list/hosts-list.component';
 import { HomeComponent } from './home/home.component';
 import { HostsListItemComponent } from './hosts-list-item/hosts-list-item.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { HostsListItemComponent } from './hosts-list-item/hosts-list-item.compon
     imports: [
         BrowserModule,
         AppRoutingModule,
-        ChartsModule
+        ChartsModule,
+      HttpClientModule,
     ],
   providers: [],
   bootstrap: [AppComponent]

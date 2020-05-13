@@ -1,5 +1,6 @@
 import {Component, Input, OnInit, Output} from '@angular/core';
 import {HostMdl} from '../../models/HostMdl';
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-hosts-list',
@@ -9,23 +10,16 @@ import {HostMdl} from '../../models/HostMdl';
 export class HostsListComponent implements OnInit {
 
   @Output() hostsArr: HostMdl[];
+ hostsList;
 
-  constructor() {
+  constructor(private http: HttpClient) {
+      }
 
-    var gentoo = new HostMdl();
-    gentoo.name = 'Gentoo';
-
-    var fedora = new HostMdl();
-    fedora.name = 'Fedora';
-
-    var Debian = new HostMdl();
-    Debian.name = 'Debian';
-
-    this.hostsArr = [gentoo, fedora,Debian];
-  }
-
-
-  ngOnInit(): void {
+  ngOnInit() {
+     this.http.get<any>('http://localhost:3500/api/hosts').subscribe(data => {
+      this.hostsArr = data;
+     });
   }
 
 }
+
