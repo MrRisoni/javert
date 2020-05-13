@@ -12,6 +12,6 @@ Monitor UI Repo  -> https://github.com/MrRisoni/javert
 
 Monitor  API Repo  -> https://github.com/MrRisoni/javert-ui-api
 
-Mongo DB was feeded with data from Gentoo,Fedora and FreeBSD virtual box installations
+Mongo DB was feeded with data from Gentoo,Fedora and FreeBSD (ZFS) virtual box installations
 
 Naming inspiration from Les Miserables Police Inspector Javert
