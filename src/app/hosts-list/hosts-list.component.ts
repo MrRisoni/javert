@@ -10,7 +10,6 @@ import {HttpClient} from "@angular/common/http";
 export class HostsListComponent implements OnInit {
 
   @Output() hostsArr: HostMdl[];
- hostsList;
 
   constructor(private http: HttpClient) {
       }

@@ -16,12 +16,14 @@
              aria-controls="nav-memory" aria-selected="false">Memory</a>
           <a class="nav-item nav-link" id="nav-disks-tab" data-toggle="tab" href="#nav-disks" role="tab"
              aria-controls="nav-disks" aria-selected="false">Disks</a>
-          <a class="nav-item nav-link" id="nav-zfs-tab" data-toggle="tab" href="#nav-zfs" role="tab"
+
+          <a *ngIf="fileSys=='zfs'" class="nav-item nav-link" id="nav-zfs-tab" data-toggle="tab" href="#nav-zfs" role="tab"
              aria-controls="nav-zfs" aria-selected="false">ZFS</a>
-          <a class="nav-item nav-link" id="nav-btrfs-tab" data-toggle="tab" href="#nav-btrfs" role="tab"
+
+          <a *ngIf="fileSys=='btrfs'" class="nav-item nav-link" id="nav-btrfs-tab" data-toggle="tab" href="#nav-btrfs" role="tab"
              aria-controls="nav-btrfs" aria-selected="false">BTRFS</a>
 
-          <a class="nav-item nav-link" id="nav-llvm-tab" data-toggle="tab" href="#nav-llvm" role="tab"
+          <a *ngIf="fileSys=='lvm'" class="nav-item nav-link" id="nav-llvm-tab" data-toggle="tab" href="#nav-llvm" role="tab"
              aria-controls="nav-llvm" aria-selected="false">LVM</a>
 
           <a class="nav-item nav-link" id="nav-network-tab" data-toggle="tab" href="#nav-network" role="tab"
@@ -50,17 +52,17 @@
           <app-disks></app-disks>
 
         </div>
-        <div class="tab-pane fade" id="nav-zfs" role="tabpanel" aria-labelledby="nav-zfs-tab">
+        <div *ngIf="fileSys=='zfs'" class="tab-pane fade" id="nav-zfs" role="tabpanel" aria-labelledby="nav-zfs-tab">
           <app-zfs></app-zfs>
 
         </div>
 
-        <div class="tab-pane fade" id="nav-btrfs" role="tabpanel" aria-labelledby="nav-btrfs-tab">
+        <div *ngIf="fileSys=='btrfs'" class="tab-pane fade" id="nav-btrfs" role="tabpanel" aria-labelledby="nav-btrfs-tab">
           <app-btrfs></app-btrfs>
 
         </div>
 
-        <div class="tab-pane fade" id="nav-llvm" role="tabpanel" aria-labelledby="nav-llvm-tab">
+        <div *ngIf="fileSys=='lvm'" class="tab-pane fade" id="nav-llvm" role="tabpanel" aria-labelledby="nav-llvm-tab">
           <app-lvm></app-lvm>
 
         </div>

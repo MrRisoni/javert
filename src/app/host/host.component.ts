@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
+import {HostMdl} from "../../models/HostMdl";
 
 @Component({
   selector: 'app-host',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HostComponent implements OnInit {
 
+  @Output() fileSys: string;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.fileSys = 'zfs';
   }
 
 }
