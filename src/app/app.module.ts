@@ -14,6 +14,9 @@ import { DisksComponent } from './disks/disks.component';
 import { MemoryComponent } from './memory/memory.component';
 import {ChartsModule} from "ng2-charts";
 import { SummaryElemComponent } from './summary-elem/summary-elem.component';
+import { HostsListComponent } from './hosts-list/hosts-list.component';
+import { HomeComponent } from './home/home.component';
+import { HostsListItemComponent } from './hosts-list-item/hosts-list-item.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { SummaryElemComponent } from './summary-elem/summary-elem.component';
     SummaryComponent,
     DisksComponent,
     MemoryComponent,
-    SummaryElemComponent
+    SummaryElemComponent,
+    HostsListComponent,
+    HomeComponent,
+    HostsListItemComponent
   ],
     imports: [
         BrowserModule,
