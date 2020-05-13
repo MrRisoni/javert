@@ -1,5 +1,6 @@
 *.swp
 node_modules/
-agent/target
-*.jar
-*.class
+*.xml
+.idea/
+.idea
+.idea/workspace.xml
