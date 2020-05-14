@@ -12,6 +12,7 @@ export class HostComponent implements OnInit {
   @Output() fileSys: string;
 
   @Output() hostData: any;
+  @Output() hostzfslist: any[];
 
 
   constructor(private http: HttpClient) {
@@ -21,6 +22,8 @@ export class HostComponent implements OnInit {
 
     this.http.get<any>('http://localhost:3500/api/hostinfo').subscribe(data => {
       this.hostData = data;
+      this.hostzfslist = data.zfslist['items'];
+      console.log('INVOJED');
     });
   }
 

@@ -1,4 +1,4 @@
-import {Component, OnInit, Output} from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-zfs',
@@ -7,7 +7,7 @@ import {Component, OnInit, Output} from '@angular/core';
 })
 export class ZFSComponent implements OnInit {
 
-  @Output() zfslist: any[];
+  @Input() zfslist: any[];
 
   constructor() { }
 

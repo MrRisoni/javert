@@ -2,7 +2,7 @@
 
 
 <h3>zfs list</h3>
-<table>
+<table class="table table-sm table-striped table-bordered">
     <thead>
         <tr>
             <th>name</th>
@@ -12,6 +12,11 @@
         </tr>
     </thead>
     <tbody>
-        
+    <tr *ngFor="let zfsItm of zfslist">
+        <th>{{ zfsItm.name }}</th>
+        <td>{{ zfsItm.usedRaw }}</td>
+        <td>{{ zfsItm.availRaw }}</td>
+        <td>{{ zfsItm.mounted}}</td>
+    </tr>
     </tbody>
 </table>
