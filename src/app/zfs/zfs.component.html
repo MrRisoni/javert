@@ -14,7 +14,8 @@
     <tbody>
     <tr *ngFor="let zp of zpool">
         <td>{{ zp.disk }}</td>
-        <td>{{ zp.state }}</td>
+        <td [ngClass]="{'table-danger': zp.state != 'ONLINE'}"
+        >{{ zp.state }}</td>
     </tr>
     </tbody>
 </table>
