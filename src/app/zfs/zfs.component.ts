@@ -8,6 +8,7 @@ import {Component, Input, OnInit, Output} from '@angular/core';
 export class ZFSComponent implements OnInit {
 
   @Input() zfslist: any[];
+  @Input() zpool: any[];
 
   constructor() { }
 

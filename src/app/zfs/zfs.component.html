@@ -1,7 +1,28 @@
-<p>zfs works!</p>
 
 
-<h3>zfs list</h3>
+
+<div class="alert alert-primary" role="alert">
+    Zpool
+</div>
+<table class="table table-sm table-striped table-bordered">
+    <thead>
+    <tr>
+        <th>Disk</th>
+        <th>Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let zp of zpool">
+        <td>{{ zp.disk }}</td>
+        <td>{{ zp.state }}</td>
+    </tr>
+    </tbody>
+</table>
+
+
+<div class="alert alert-primary" role="alert">
+    zfs list
+</div>
 <table class="table table-sm table-striped table-bordered">
     <thead>
         <tr>
@@ -13,10 +34,11 @@
     </thead>
     <tbody>
     <tr *ngFor="let zfsItm of zfslist">
-        <th>{{ zfsItm.name }}</th>
+        <td>{{ zfsItm.name }}</td>
         <td>{{ zfsItm.usedRaw }}</td>
         <td>{{ zfsItm.availRaw }}</td>
         <td>{{ zfsItm.mounted}}</td>
     </tr>
     </tbody>
 </table>
+
