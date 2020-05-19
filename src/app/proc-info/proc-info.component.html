@@ -1,1 +1,19 @@
-<p>proc-info works!</p>
+
+<table class="table table-sm table-striped table-bordered">
+    <thead>
+    <tr>
+        <th>PID</th>
+        <th>CPU</th>
+        <th>Memory</th>
+        <th>Command</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let p of procs">
+        <td>{{ p.pid }}</td>
+        <td>{{ p.cpu }}</td>
+        <td>{{ p.memory }}</td>
+        <td>{{ p.command }}</td>
+    </tr>
+    </tbody>
+</table>

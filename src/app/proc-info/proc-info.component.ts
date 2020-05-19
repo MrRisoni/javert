@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-proc-info',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./proc-info.component.css']
 })
 export class ProcInfoComponent implements OnInit {
+
+
+  @Input() procs: any[];
 
   constructor() { }
 

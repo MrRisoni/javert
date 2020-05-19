@@ -14,6 +14,7 @@ export class HostComponent implements OnInit {
   @Output() hostData: any;
   @Output() hostzfslist: any[];
   @Output() zpool: any[];
+  @Output() sysprocs: any[];
 
 
   constructor(private http: HttpClient) {
@@ -25,6 +26,7 @@ export class HostComponent implements OnInit {
       this.hostData = data;
       this.hostzfslist = data.zfslist['items'];
       this.zpool = data.zpool['disks'];
+      this.sysprocs = data.sysproc['processes'];
 
       console.log('INVOJED');
     });
