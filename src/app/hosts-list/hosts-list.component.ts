@@ -1,6 +1,7 @@
 import {Component, Input, OnInit, Output} from '@angular/core';
-import {HostMdl} from '../../models/HostMdl';
 import {HttpClient} from '@angular/common/http';
+import {IaverisService} from "../iaveris.service";
+
 
 @Component({
   selector: 'app-hosts-list',
@@ -11,14 +12,15 @@ export class HostsListComponent implements OnInit {
 
   @Output() hostsArr: HostMdl[];
 
-  constructor(private http: HttpClient) {
-      }
+  constructor(private javertSrvc: IaverisService) {
+    }
 
   ngOnInit() {
-     this.http.get<any>('http://localhost:3500/api/hosts').subscribe(data => {
+    this.javertSrvc.getHosts().subscribe(data => {
+
+
       this.hostsArr = data;
      });
   }
 
 }
-
