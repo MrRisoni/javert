@@ -1,6 +1,6 @@
 import {Component, OnInit, Output} from '@angular/core';
 import { environment } from '../../environments/environment';
-import {HttpClient} from '@angular/common/http';
+import {IaverisService} from "../iaveris.service";
 
 @Component({
   selector: 'app-host',
@@ -17,12 +17,15 @@ export class HostComponent implements OnInit {
   @Output() sysprocs: any[];
 
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private javertSrvc: IaverisService) {
+    }
+
+
   ngOnInit(): void {
     this.fileSys = 'zfs';
   console.log(environment.api_url);
-    this.http.get<any>(environment.api_url + '/api/hostinfo').subscribe(data => {
+  this.javertSrvc.getHostInfo().subscribe(data => {
+
       this.hostData = data;
       this.hostzfslist = data.zfslist['items'];
       this.zpool = data.zpool['disks'];
